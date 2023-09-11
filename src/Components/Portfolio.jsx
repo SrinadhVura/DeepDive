@@ -19,9 +19,9 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
-
-const imageAltText = "desktop with books and laptop";
+import image from "../images/tim-arterbury-VkwRmha1_tI-unsplash.jpg";
+import image2 from "../images/markus-spiske-k0rVudBoB4c-unsplash.jpg";
+const imageAltText = "desktop with note and paint brush, palette";
 
 /**
  * Project list
@@ -31,52 +31,81 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Voice CLUE",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "Voice CLUE is an AI powered voice assistant that can generate description of key word prompted by the user. An official top 5 project in cohere hackathon.",
+    url: "https://gayatrivadaparty-cohere-hack-wem2-codevoice-clue-pliaoz.streamlit.app/",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Smoky Cars Analyzer",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Smoky Cars Analyzer is a web app that can judge the fitness of vehicles and can help the people mainly in polar countries to avoid pollution that is highly hazardous to animals like polar bears.",
+    url: "https://github.com/SrinadhVura/CallForCode",
   },
   {
-    title: "My Resume Site",
+    title: "Predicting Puppy's mood",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Our deep learning model can predict your puppy's mood just my looking at the image. Puppy's can have 3 different moods - Sad, Relaxed, Happy. We have used Pytorch, Cuda framework, Python, Deep Learning Neural Networks.",
+    url: "https://github.com/SrinadhVura/Predicting_puppy-s_mood",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "WeatherApp",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "The repository is a command-line python tool which retrieves detailed weather of the city that is provided as a command-line argument.",
+    url: "https://github.com/SrinadhVura/WeatherApp",
+  },
+  {
+    title: "MediFix",
+    description:
+      "Our Medifix is an AI powered assistant powered on gpt-3.5 turbo (chatGPT). Medifix is designed to help people by providing preventive measures based on the symptoms mentioned. Medifix is an official submission to OpenAI Stack Hack challenge.",
+    url: "https://github.com/SrinadhVura/OpenAI-Stack-Hack",
+  },
+  {
+    title: "Volume Controller",
+    description:
+      "The volume controller is designed by inheriting the concepts of computer vision and utilizes mediapipe framework from google. The volume of PC can be controlled by hand gestures using this repository.",
+    url: "https://github.com/SrinadhVura/Volume_Contoller",
   },
 ];
 
 const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
+      <img className="background" src={image2} alt={imageAltText} />
+
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
             src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
             alt={imageAltText}
+            style={{
+              height: "90%",
+              width: "100%",
+              objectFit: "cover",
+              animation: "1s ease-out 0s 1 slideIn",
+            }}
           />
         </div>
-        <div className="container">
-          {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
-              <p className="small">{project.description}</p>
-            </div>
-          ))}
+        <div
+          style={{
+            backgroundColor: "white",
+            width: "50%",
+            padding: "4rem",
+            margin: "3rem auto",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ textAlign: "center" }}>Projects</h2>
+          <div className="container">
+            {projectList.map((project) => (
+              <div className="box" key={project.title}>
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                </a>
+                <p className="small">{project.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

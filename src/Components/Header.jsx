@@ -14,7 +14,7 @@ const Header = () => {
         display: "flex",
         justifyContent: "center",
         gap: "2rem",
-        background: "rgba(255,255,255,0.75)",
+        background: "rgba(250, 188, 107,0.75)",
         padding: "1rem",
         top: 0,
         width: "100%",
@@ -23,7 +23,11 @@ const Header = () => {
     >
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#virtualexperience">Virtual Experience</a>
+      <a href="#certifications">Certifications</a>
       <a href="#footer">Contact</a>
     </div>
   );
