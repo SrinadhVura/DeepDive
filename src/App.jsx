@@ -35,9 +35,9 @@ const siteProps = {
   email: "srinadhvura@gmail.com",
   gitHub: "SrinadhVura",
   instagram: "sri_xtreme.xz",
-  linkedIn: "https://www.linkedin.com/in/srinadh-vura-85a99b20a/",
-  medium: "https://medium.com/@srinadhvura",
-  twitter: "https://twitter.com/srinadh_vura",
+  linkedIn: "srinadh-vura-85a99b20a/",
+  medium: "@srinadhvura",
+  twitter: "srinadh_vura",
   youTube: "@srinadhvura474",
 };
 
